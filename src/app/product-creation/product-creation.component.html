@@ -1,0 +1,50 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<form class="form-horizontal" *ngIf = "!productAddedStatus">
+<fieldset>
+
+<!-- Form Name -->
+<legend>ADD PRODUCT</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="product_name">NAME</label>  
+  <div class="col-md-4">
+  <input [(ngModel)] = "productName" id="product_name" name="product_name" placeholder="PRODUCT NAME" class="form-control input-md" required="" type="text">
+    
+  </div>
+</div>
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="product_price">PRICE</label>  
+  <div class="col-md-4">
+  <input [(ngModel)] = "productPrice" id="product_price" name="product_price" placeholder="product_price" class="form-control input-md" required="" type="text">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="product_weight">STOCK</label>  
+  <div class="col-md-4">
+  <input [(ngModel)] = "productStock" id="product_stock" name="product_stock" placeholder="product_stock" class="form-control input-md" required="" type="text">
+    
+  </div>
+</div>
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <button type = "button" (click) = "addProd()" id="singlebutton" name="singlebutton" class="btn btn-primary">Add</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
